@@ -24,7 +24,7 @@
             <div class="w-50 " sec:authorize="isAuthenticated()" >
                 <form class="d-flex justify-content-end" th:action="@{/logout}"
                       method="POST">
-                    <label class="font-monospace text-white" style="margin-top: 0.9rem; margin-right: 2rem; ">Hello, <span class="fw-normal"  sec:authentication="name"> Username</span></label>
+                    <label class="font-monospace text-white" style="margin-top: 0.9rem; margin-right: 2rem; ">Edit</label>
                     <a class=" m-2 btn btn-secondary" aria-current="page" th:href="@{/}">Home</a>
                     <a class=" m-2 btn btn-secondary" aria-current="page" th:href="@{/projects}">projects</a>
                     <button class="m-2 btn btn-outline-success" type="submit">Logout</button>
