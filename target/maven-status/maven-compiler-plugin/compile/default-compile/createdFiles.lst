@@ -1,0 +1,15 @@
+com/qwasar/myspringportfolio/config/setData.class
+com/qwasar/myspringportfolio/models/Account.class
+com/qwasar/myspringportfolio/controllers/ProjectController.class
+com/qwasar/myspringportfolio/repositories/AccountRepository.class
+com/qwasar/myspringportfolio/services/ProjectService.class
+com/qwasar/myspringportfolio/repositories/ProjectRepository.class
+com/qwasar/myspringportfolio/models/Project.class
+com/qwasar/myspringportfolio/services/MyUserDetailsService.class
+com/qwasar/myspringportfolio/models/Authority.class
+com/qwasar/myspringportfolio/repositories/AuthorityRepository.class
+com/qwasar/myspringportfolio/controllers/SignUpController.class
+com/qwasar/myspringportfolio/controllers/SignInController.class
+com/qwasar/myspringportfolio/MySpringPortfolioApplication.class
+com/qwasar/myspringportfolio/config/WebSecurityConfig.class
+com/qwasar/myspringportfolio/services/AccountService.class

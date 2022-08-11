@@ -28,7 +28,7 @@ public class setData implements CommandLineRunner {
     private AuthorityRepository authorityRepository;
 
     @Override
-    public  void run (String... args) throws Exception {
+    public  void run (String... args) {
         List<Project> projects = projectService.getAll();
 
         if (projects.size() == 0) {
@@ -56,7 +56,6 @@ public class setData implements CommandLineRunner {
             accountAdmin.setPassword("4444");
             Set<com.qwasar.myspringportfolio.models.Authority> authorities2 = new HashSet<>();
             authorityRepository.findById("ROLE_ADMIN").ifPresent(authorities2::add);
-            authorityRepository.findById("ROLE_USER").ifPresent(authorities2::add);
             accountAdmin.setAuthorities(authorities2);
 
             accountService.save(accountUser);

@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +26,7 @@ public class ProjectController {
     private AccountService accountService;
 
     @GetMapping("/")
-    public String home(Model model) {
+    public String home() {
         return "home";
     }
 
@@ -40,7 +39,7 @@ public class ProjectController {
     }
 
     @GetMapping("/projects/{id}")
-    public String getPost(@PathVariable Long id, Model model) {
+    public String getProject(@PathVariable Long id, Model model) {
 
         Optional<Project> optionalProject = this.projectService.getById(id);
 
@@ -54,16 +53,16 @@ public class ProjectController {
     }
 
     @PostMapping("/projects/{id}")
-    @PreAuthorize("isAuthenticated()")
-    public String updatePost(@PathVariable Long id, Project project, BindingResult result, Model model) {
-
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String updateProject(@PathVariable Long id, Project project) {
         Optional<Project> optionalProject = projectService.getById(id);
         if (optionalProject.isPresent()) {
             Project existingProject = optionalProject.get();
 
             existingProject.setName(project.getName());
             existingProject.setDescription(project.getDescription());
-
+            existingProject.setUrl(project.getUrl());
+            existingProject.setImgUrl(project.getImgUrl());
             projectService.save(existingProject);
         }
 
@@ -71,8 +70,8 @@ public class ProjectController {
     }
 
     @GetMapping("/projects/new")
-    @PreAuthorize("isAuthenticated()")
-    public String createNewPost(Model model, Principal principal) {
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String createNewProject(Model model, Principal principal) {
 
         String authUsername = "anonymousUser";
         if (principal != null) {
@@ -92,7 +91,7 @@ public class ProjectController {
 
     @PostMapping("/projects/new")
     @PreAuthorize("isAuthenticated()")
-    public String createNewPost(@ModelAttribute Project project, Principal principal) {
+    public String createNewProject(@ModelAttribute Project project, Principal principal) {
         String authUsername = "anonymousUser";
         if (principal != null) {
             authUsername = principal.getName();
@@ -105,8 +104,8 @@ public class ProjectController {
     }
 
     @GetMapping("/projects/{id}/edit")
-    @PreAuthorize("isAuthenticated()")
-    public String getPostForEdit(@PathVariable Long id, Model model) {
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String getProjectForEdit(@PathVariable Long id, Model model) {
         Optional<Project> optionalPost = projectService.getById(id);
         if (optionalPost.isPresent()) {
             Project projects = optionalPost.get();
@@ -119,7 +118,7 @@ public class ProjectController {
 
     @GetMapping("/projects/{id}/delete")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String deletePost(@PathVariable Long id) {
+    public String deleteProject(@PathVariable Long id) {
 
         Optional<Project> optionalPost = projectService.getById(id);
         if (optionalPost.isPresent()) {

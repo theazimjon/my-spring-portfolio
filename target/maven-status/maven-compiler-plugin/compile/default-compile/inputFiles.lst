@@ -1,0 +1,15 @@
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/services/MyUserDetailsService.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/services/AccountService.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/models/Authority.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/controllers/SignUpController.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/config/setData.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/controllers/ProjectController.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/repositories/AccountRepository.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/services/ProjectService.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/models/Project.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/models/Account.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/repositories/AuthorityRepository.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/repositories/ProjectRepository.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/controllers/SignInController.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/MySpringPortfolioApplication.java
+/Users/student/Downloads/qwasar_sshkeys/my_spring_portfolio/src/main/java/com/qwasar/myspringportfolio/config/WebSecurityConfig.java

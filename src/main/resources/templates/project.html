@@ -40,7 +40,7 @@
 
         <h5 class="text-secondary mt-2" th:text="${project.description}">description</h5>
         <a class="btn btn-primary" th:href="@{'' + ${project.url}}">Visit </a>
-        <div class="mt-3" sec:authorize="isAuthenticated()">
+        <div class="mt-3" sec:authorize="hasRole('ROLE_ADMIN')">
             <a class="btn btn-warning" th:href="@{'/projects/' + ${project.id} + '/edit'}">Edit</a>
             <a class="btn btn-danger" th:href="@{'/projects/' + ${project.id} + '/delete'}">Delete</a>
         </div>
