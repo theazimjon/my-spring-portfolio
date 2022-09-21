@@ -1,6 +1,9 @@
 # Welcome to My Spring Portfolio
 ***
-Live demo: https://myspringportfolio.herokuapp.com
+[Live demo](https://myspringportfolio.herokuapp.com)
+
+<img src="https://theazimjon.netlify.app/assets/img/portfolio/spring2.png" />
+
 ## Task
 - Building a multipage portfolio to introduce ourselves
 - add  authorization and authentication
@@ -29,9 +32,12 @@ mvn spring-boot:run
 
 
 ## Usage
-http://localhost:4444
+- http://localhost:4444
 
-
+### MIT License
+[![License](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0])  
+<a href="https://github.com/theazimjon/my-spring-portfolio/blob/main/LICENSE.md" > Copyright (c) 2022 Azimjon Umarov </a>
+<p> Forbidden plagiarism for assigments! </p>
 
 ### The Core Team
 Azimjon Umarov @umarov_a
